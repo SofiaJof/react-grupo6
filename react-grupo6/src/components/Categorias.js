@@ -25,14 +25,16 @@ function Categorias() {
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">Categoria</th>
+                        <th scope="col">Categoría</th>
+                        <th scope="col">Total productos por categoría</th>
                     </tr>
                 </thead>
                 <tbody>
                     { categorias.map((categoria,i) => 
                         <tr key={i}>
-                            <td>{categoria.id}</td>
-                            <td>{categoria.category}</td> 
+                            <td>{categoria.categoria.id}</td>
+                            <td>{categoria.categoria.category}</td> 
+                            <td>{categoria.totalProductos}</td> 
                         </tr>
                     )}
                 </tbody>
